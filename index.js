@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-mongoose.connect('sua_string_de_conexao_mongodb', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://Bfrpaulon:Bfrp1997!@cluster0.mjqpacl.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Rotas para Cortes de Cabelo
 app.get('/haircuts', async (req, res) => {
