@@ -1,0 +1,70 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Blade & Style API",
+      "description": "Documentação da API Blade & Style",
+      "contact": {
+        "name": "Seu Nome",
+        "email": "seu@email.com"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/api": {
+        "get": {
+          "summary": "Rota de boas-vindas",
+          "description": "Retorna uma mensagem de boas-vindas.",
+          "responses": {
+            "200": {
+              "description": "Sucesso",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "example": "Bem-vindo à API do Blade & Style!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/cuts": {
+        "get": {
+          "summary": "Obter todos os cortes",
+          "description": "Retorna uma lista de todos os cortes disponíveis.",
+          "responses": {
+            "200": {
+              "description": "Sucesso",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Cut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Cut": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Corte de exemplo"
+          },
+          "price": {
+            "type": "number",
+            "example": 25.99
+          }
+        }
+      }
+    }
+  }
+  
